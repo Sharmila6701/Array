@@ -1,0 +1,40 @@
+package practice;
+
+import java.util.Scanner;
+
+public class MinMaxInArrayExample {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+
+        int[] intArray = new int[size];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            intArray[i] = scanner.nextInt();
+        }
+
+        int min = intArray[0];
+        int max = intArray[0];
+
+        for (int element : intArray) {
+            if (element < min) {
+                min = element;
+            }
+            if (element > max) {
+                max = element;
+            }
+        }
+
+        System.out.println("Minimum Element: " + min);
+        System.out.println("Maximum Element: " + max);
+
+        
+    }
+}
+
+
+
+
